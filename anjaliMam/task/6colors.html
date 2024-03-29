@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .class {
+            width: 30px;
+            height: 30px;
+        }
+        .btnclaalist {
+            background-color: brown;
+        }
+
+        .newdiv2 {
+            margin-top: 10px;
+            border: 2px solid black;
+            height: 50px;
+            padding: 10px;
+            box-shadow: 10px 10px 5px rgb(124, 126, 126);;
+            text-align: center;
+            border-radius: 20px;
+            width: 20%;
+        }
+        .classcolor
+        {
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="colorbox"> -->
+
+    <!-- </div> -->
+    <div id="mydiv"></div>
+    <script>
+        var div = document.getElementById("mydiv");
+        // input creat kiya
+        var input = document.createElement("input");
+        div.append(input);
+        input.placeholder = "Enter your color";
+        input.id = "inputid";
+        console.log(input);
+
+        // button creat kiya
+        var btn = document.createElement("button");
+        btn.id = "btnid";
+        btn.textContent = "click me";
+        btn.classList.add("btnclaalist")
+        console.log(btn);
+        div.append(btn);
+
+
+        btn.addEventListener("click", function () {
+            var newdiv = document.createElement("div");
+            console.log(newdiv);
+            newdiv.textContent = "hello";
+            newdiv.classList.add("newdiv2");
+            div.appendChild(newdiv);  
+
+            var colordata = document.getElementById("inputid").value;
+            newdiv.textContent = colordata
+            newdiv.style.backgroundColor = colordata;
+       
+            newdiv.addEventListener("click",function(){
+                let a = this.textContent;
+                console.log(a);
+                
+             document.body.style.backgroundColor=a
+            //  this.getAttribute("")
+            })
+                  
+        })
+
+    </script>
+</body>
+
+</html>

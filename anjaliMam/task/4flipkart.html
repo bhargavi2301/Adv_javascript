@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .firstt img{
+            height: 70px;
+            width: 90px;
+            display: grid;
+            /* gap: 20px; */
+        }
+        .sec-div img{
+            width:414px;
+            height: 356px;
+
+        }
+        .third-div{
+            display: flex;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="third-div">
+    <div class="firstt">
+         <img src="../img/s-img1.webp" alt="">
+         <img src="../img/s-img2.webp" alt="">
+         <img src="../img/s-img3.webp" alt="">
+         <img src="../img/s-img4.webp" alt="">
+         <img src="../img/s-img5.webp" alt="">
+    </div>
+    <div class="sec-div">
+        <img src="../img/s-img1.webp" alt="">
+    </div>
+    </div>
+    <script>
+        var data1= document.querySelectorAll(".firstt img");
+         console.log(data1);
+         data1.forEach(function (firstt){
+            console.log(firstt);
+
+            firstt.addEventListener("click",function () {
+                data2 = this.getAttribute("src");
+                console.log(data2);
+
+                var sesion = document.querySelector(".sec-div img");
+                console.log(sesion);
+
+                sesion.setAttribute("src",data2)
+
+            })
+
+         })
+    </script>
+</body>
+</html>

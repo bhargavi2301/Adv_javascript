@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello Bhargavi</h1>
+    <button id="on">Dark mode ON</button>
+    <button id="off">Dark mode off</button>
+    <script>
+        var bbb = document.body
+        var on = document.getElementById("on").addEventListener("click", function(){
+                  bbb.style.backgroundColor = "grey";
+                  bbb.style.color = "white";
+
+        })
+        var off = document.getElementById("off").addEventListener("click", function(){
+                  bbb.style.backgroundColor = "black";
+                  bbb.style.color = "white";
+        })
+        // bbb.style.backgroundColor = "green";
+    </script>
+</body>
+</html>

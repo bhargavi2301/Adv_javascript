@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1,
+        img {
+            /* margin: 15px; */
+            width: 700px;
+
+        }
+
+        .box1 {
+            /* position: relative; */
+            z-index: 1;
+        }
+
+        .box2 {
+            /* align-items: center; */
+            padding-top: 20px;
+            display: flex;
+            width: 50%;
+            gap: 20px;
+            /* border: 2px solid black; */
+            height: 90px;
+            /* box-shadow: 5px 10px 8px 10px #888888; */
+
+        }
+        .img1{
+            height: 30px;
+            width: 20%;
+            border: 2px solid black;
+        }
+
+       
+        
+       
+         
+    </style>
+</head>
+
+<body>
+     <h1 style="font-size: 45px; text-shadow:2px 3px 3px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;     ;">Asian Paints Catalouge</h1>
+    <div class="box1" id="boxx1">
+        <img src="../img/new-aqua-onyx-stone-texture-marble-wallpaper-mural.png" alt="">
+    </div>
+    <DIV class="box2">
+        <img clas="img1"  src="../img/wallpaper-1.webp" alt="">
+        <img clas="img2"  src=" ../img/wallpaper-2.webp" alt="">
+        <img clas="img3"  src="../img/wallpaper-3.webp" alt="">
+        <img clas="img4"  src="../img/wallpaper-4.webp" alt="">
+        <img clas="img5"  src="../img/wallpaper-5.webp" alt="">
+        <img clas="img6"  src="../img/wallpaper-6.webp" alt="">
+    </DIV>
+</body>
+<script>
+
+ var data1=document.querySelectorAll(".box2 img");
+//  console.log(data1);
+ data1.forEach(function(e){
+    e.addEventListener("click",function(){
+        let a=this.getAttribute("src");
+        console.log(a);
+
+        let b = document.getElementById("boxx1");
+        console.log(b);
+        b.style.background=`url(${a})`;
+    })
+
+ })     
+</script>
+
+</html>

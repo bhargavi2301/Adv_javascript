@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img1 img {
+            margin-left: 429px;
+            align-items: center;
+            height: 450px;
+            width: 30%;
+        }
+
+        button {
+            width: 10%;
+            height: 40px;
+            border: none;
+            margin-inline: 20px;
+            border-radius: 6px;
+
+        }
+
+        .mydiv {
+            text-align: center;
+        }
+        #btnon{
+           background-color: rgba(11, 164, 23, 0.673); 
+           color: aliceblue;
+          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+        }
+        #btnoff{
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            color: aliceblue;
+            background-color: rgb(217, 38, 38);
+        }
+       
+    </style>
+</head>
+
+<body>
+    <h1 style="text-shadow: 2px 3px 4px; font-size: 50px; text-align: center;">Bulb</h1>
+    <div class="img1">
+        <img id="myimg" src="../img/bulb-offimg-removebg-preview.png" alt="">
+        <!-- <img src="../img/On-imgg.jpg" alt=""> -->
+    </div>
+    <div class="mydiv">
+        <button id="btnoff" onclick="offbulb()">OFF</button>
+        <button id="btnon" onclick="onbulb()">ON</button>
+    </div>
+    <script>
+        function onbulb() {
+            let a = document.getElementById("myimg").src = "../img/On-imgg.jpg";
+            a.style.width = "30%";
+            // let b = document.getElementById("btnon");
+            // b.classList.add("btnon");
+            
+        }
+        function offbulb() {
+            document.getElementById("myimg").src = "../img/bulb-offimg-removebg-preview.png";
+            // document.getElementById("btnoff").style.backgroundColor = "red"
+
+        }
+    </script>
+</body>
+
+</html>
